@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App forecast</title>
+    <link rel="stylesheet" href="src/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <form id="weather-form">
+          <input
+            type="search"
+            id="weather-input"
+            placeholder="Enter City..."
+            required
+          />
+          <input type="button" value="Search" id="btn" />
+        </form>
+      </header>
+      <div class="main">
+        <div class="current-weather">
+          <h1 id="city">Abuja</h1>
+          <h2 id="weather-value">
+            <span class="icon">⛅</span> 9 <span class="deg">℃</span>
+          </h2>
+          <br />
+          <span class="weather-date"> Thursday 10:40, </span>
+          <span class="weatherDetail"> clear sky </span>
+        </div>
+        <div class="weather-condition">
+          <span>Country:<span id="country">Nigeria</span></span>
+          <br />
+          <span>Humidity:<span class="color">88%</span></span>
+          <br />
+          <span>Wind:<span class="color">5km/hr</span></span>
+          <br />
+        </div>
+      </div>
+      <div class="forecast">
+        <div class="row">
+          <div class="col-2"></div>
+        </div>
+      </div>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
