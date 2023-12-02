@@ -41,30 +41,43 @@ body {
 #weather-value {
   font-size: 68px;
   margin: 10px 10px 10px 0;
-
   line-height: 12px;
 }
 .deg {
   font-size: 25px;
   position: relative;
   top: -18px;
-  left: -20px;
+  left: -15px;
 }
 .weather-condition {
-  margin: 32px 30px 0 0;
+  margin: 70px 30px 0 0;
   font-size: 25px;
   line-height: 52px;
   font-weight: 500;
 }
 .weather-date,
 .weatherDetail {
-  font-size: 20px;
+  font-size: 22px;
 }
 .icon {
   font-size: 40px;
   position: relative;
-  left: 12px;
+  left: 15px;
+  top: 28px;
 }
 .color {
   color: #d2691e;
+}
+.dateElement {
+  position: relative;
+  top: -15px;
+}
+.current-weather {
+  margin: bottom 20px;
+}
+.weatherItem {
+  position: relative;
+  top: -40px;
+  right: 35px;
+  bottom: 10px;
 }

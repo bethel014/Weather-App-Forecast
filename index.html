@@ -22,20 +22,23 @@
       </header>
       <div class="main">
         <div class="current-weather">
-          <h1 id="city">Abuja</h1>
-          <h2 id="weather-value">
-            <span class="icon">⛅</span> 9 <span class="deg">℃</span>
-          </h2>
-          <br />
-          <span class="weather-date" id="current-date"></span>
-          <span class="weatherDetail"> clear sky </span>
+          <h1 id="city"></h1>
+          <div class="weatherItem">
+            <span class="icon"></span>
+            <span id="weather-value"></span>
+            <span class="deg">℃</span>
+          </div>
+          <div class="dateElement">
+            <span class="weather-date" id="current-date"></span>
+            <span class="weatherDetail"> </span>
+          </div>
         </div>
         <div class="weather-condition">
-          <span>Country:<span id="country">Nigeria</span></span>
+          <span>Country:<span class="color" id="country"></span></span>
           <br />
-          <span>Humidity:<span class="color">88%</span></span>
+          <span>Humidity:<span class="color" id="value"></span></span>
           <br />
-          <span>Wind:<span class="color">5km/hr</span></span>
+          <span>Wind:<span id="wind" class="color"></span></span>
           <br />
         </div>
       </div>
