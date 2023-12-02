@@ -11,6 +11,15 @@ function handleSubmit(event) {
   axios.get(apiUrl).then(displayCurrentTemp);
 }
 
+function displayCurrentTemp(response) {
+  let cityElement = document.querySelector("#city");
+  cityElement.innerHTML = response.data.city;
+  let countryElement = document.querySelector("#country");
+  countryElement.innerHTML = response.data.country;
+  let temperature = document.querySelector("#weather-value");
+  temperature.innerHTML = Math.round(response.data.temperature.current);
+}
+
 let currentDate = new Date();
 
 let minute = currentDate.getMinutes();
@@ -35,12 +44,3 @@ if (hour < 10) {
 
 let weatherDate = document.querySelector("#current-date");
 weatherDate.innerHTML = `${day} ${hour} : ${minute} ,`;
-
-function displayCurrentTemp(response) {
-  let cityElement = document.querySelector("#city");
-  cityElement.innerHTML = response.data.city;
-  let countryElement = document.querySelector("#country");
-  countryElement.innerHTML = response.data.country;
-  let temperature = document.querySelector("#weather-value");
-  temperature.innerHTML = Math.round(response.data.temperature.current);
-}
