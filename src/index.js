@@ -5,9 +5,10 @@ function handleSubmit(event) {
   event.preventDefault();
 
   let searchInput = document.querySelector("#weather-input");
-  let cityInput = document.querySelector("#city");
-  console.log(cityInput);
-  cityInput.innerHTML = searchInput.value;
+  let city = searchInput.value;
+  let apiKey = "8fa2ab32e21db893o44btbabb185f06b";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
+  axios.get(apiUrl).then(displayCurrentTemp);
 }
 
 let currentDate = new Date();
