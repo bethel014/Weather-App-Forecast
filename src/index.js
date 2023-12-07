@@ -34,6 +34,9 @@ function displayCurrentTemp(response) {
   let condition = document.querySelector(".weatherDetail");
   condition.innerHTML = response.data.condition.description;
 
+  let degree = document.querySelector(".deg");
+  degree.innerHTML = "℃";
+
   let weatherIcon = document.querySelector(".icon");
   weatherIcon.innerHTML = `<img src="${response.data.condition.icon_url}" class ="weather-app-icon" />`;
 }
@@ -62,5 +65,30 @@ if (hour < 10) {
 
 let weatherDate = document.querySelector("#current-date");
 weatherDate.innerHTML = `${day} ${hour} : ${minute} ,`;
+
+function showForecast(response) {
+  let forecastHtml = "";
+
+  response.data.daily.forEach(function (day, index) {
+    if (index > 0 && index < 6) {
+      forecastHtml =
+        forecastHtml +
+        ` <div class="forecast">
+          <span class="forecast-day">${forecastDate(day.time)}</span>
+          <br />
+          <span >
+          <img src = "${day.condition.icon_url}" class="forecast-icon" >
+          </span>
+          <br />
+          <span class="max"><strong>${Math.round(
+            day.temperature.maximum
+          )}°</strong></span>
+          <span class="min">${Math.round(day.temperature.minimum)}°</span>
+        </div>`;
+    }
+  });
+  let forecast = document.querySelector("#forecast");
+  forecast.innerHTML = forecastHtml;
+}
 
 displayCity("Asaba");
