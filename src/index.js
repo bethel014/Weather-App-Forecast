@@ -66,6 +66,12 @@ if (hour < 10) {
 let weatherDate = document.querySelector("#current-date");
 weatherDate.innerHTML = `${day} ${hour} : ${minute} ,`;
 
+function getForecast(city) {
+  let apiKey = "8fa2ab32e21db893o44btbabb185f06b";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}`;
+  axios.get(apiUrl).then(showForecast);
+}
+
 function showForecast(response) {
   let forecastHtml = "";
 
