@@ -39,6 +39,7 @@ function displayCurrentTemp(response) {
 
   let weatherIcon = document.querySelector(".icon");
   weatherIcon.innerHTML = `<img src="${response.data.condition.icon_url}" class ="weather-app-icon" />`;
+  getForecast(response.data.city);
 }
 
 let currentDate = new Date();
@@ -65,6 +66,13 @@ if (hour < 10) {
 
 let weatherDate = document.querySelector("#current-date");
 weatherDate.innerHTML = `${day} ${hour} : ${minute} ,`;
+
+function forecastDate(timestamp) {
+  let date = new Date(timestamp * 1000);
+
+  let days = ["Sun", "Mon", "Tues", "Wed", "Thur", "Fri", "Sat"];
+  return days[date.getDay()];
+}
 
 function getForecast(city) {
   let apiKey = "8fa2ab32e21db893o44btbabb185f06b";
