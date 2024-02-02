@@ -1,6 +1,5 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #57a8d8;
 }
 
 .container {
@@ -8,14 +7,10 @@ body {
   border: none;
   border-radius: 12px;
   margin: 0 auto;
-  background-color: #dcdcdc;
+  color: #dcdcdc;
+  background-color: #03031b;
   padding: 25px 30px;
   box-shadow: 1px 3px rgba(0, 0, 0, 0.5);
-  text-shadow: 1px 1px 5px #fff;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/106/368/original/pexels-prashant-gautam-3783385.jpg?1701987018");
 }
 
 #weather-input {
@@ -35,10 +30,8 @@ body {
   justify-content: space-between;
 }
 #city {
-  color: #d2691e;
   font-size: 45px;
   letter-spacing: 1.5px;
-  margin-bottom: 20px;
 }
 #weather-value {
   font-size: 68px;
@@ -68,18 +61,11 @@ body {
   top: 28px;
 }
 
-.color {
-  color: #d2691e;
-}
-
 .current-weather {
   margin: bottom 20px;
 }
 .weatherItem {
-  position: relative;
-  top: -40px;
-  right: 35px;
-  bottom: 10px;
+  margin: -50px 40px 50px 0;
 }
 .forecast-weather {
   display: flex;
@@ -87,15 +73,23 @@ body {
   margin: 40px 0px 20px;
   border-bottom: 1px solid grey;
 }
+.forecast {
+  border: none;
+  border-radius: 3px;
+  background-color: #333;
+
+  width: 60px;
+  text-align: center;
+}
 .forecast-day {
   font-size: 18px;
 }
+
 .forecast-icon {
   width: 70px;
-  height: 80px;
+  height: 65px;
   text-align: center;
-  position: relative;
-  right: 18px;
+  margin-left: -5px;
 }
 .min {
   opacity: 0.8;
