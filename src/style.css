@@ -24,13 +24,12 @@ body {
   border-radius: 10px;
   font-size: 18px;
 }
-.main {
-  display: flex;
-  justify-content: space-between;
-}
+
 #city {
   font-size: 45px;
   letter-spacing: 1.5px;
+  text-align: end;
+  margin: 50px;
 }
 #weather-value {
   font-size: 68px;
@@ -43,26 +42,21 @@ body {
   top: -30px;
   left: -10px;
 }
+.weather-condition,
+.icon {
+  font-size: 20px;
+}
 .weather-condition {
-  margin: 70px 30px 0 0;
-  font-size: 25px;
-  line-height: 52px;
-  font-weight: 500;
+  padding: 20px;
 }
 .weather-date,
 .weatherDetail {
   font-size: 22px;
 }
 .icon {
-  font-size: 20px;
-  position: relative;
-  left: 15px;
-  top: 28px;
+  margin-top: 50px;
 }
 
-.current-weather {
-  margin: bottom 20px;
-}
 .weatherItem {
   margin: -50px 40px 50px 0;
 }
