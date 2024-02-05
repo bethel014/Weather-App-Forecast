@@ -1,40 +1,51 @@
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Helvetica, sans-serif;
+  background-color: aliceblue;
 }
 
 .container {
-  width: 600px;
+  width: 450px;
   border: none;
   border-radius: 12px;
   margin: 60px auto;
-  color: #dcdcdc;
+  color: #c0c0c0;
   background-color: #03031b;
-  padding: 25px 30px;
+  padding: 15px;
 }
 
 #weather-input {
   padding: 5px;
   font-size: 15px;
-  width: 450px;
-  background-color: #dcdcdc;
+  width: 350px;
+  background-color: #c0c0c0;
 }
 #btn {
   padding: 5px 10px;
-  border: 1px solid #dcdcdc;
+  border: 1px solid;
   border-radius: 10px;
   font-size: 18px;
+  background-color: #c0c0c0;
+  color: #03031b;
 }
 
 #city {
-  font-size: 45px;
+  font-size: 50px;
   letter-spacing: 1.5px;
-  text-align: end;
-  margin: 50px;
+  margin: 10px 0 0 0;
+  text-align: center;
 }
 #weather-value {
   font-size: 68px;
-  margin: 10px 10px 10px 0;
+  margin: 10px;
   line-height: 12px;
+}
+.current-weather,
+.dateElement,
+.weather-condition,
+.weather-date,
+.weatherDetail {
+  text-align: center;
+  font-size: 18px;
 }
 .deg {
   font-size: 25px;
@@ -42,28 +53,19 @@ body {
   top: -30px;
   left: -10px;
 }
-.weather-condition,
+
 .icon {
   font-size: 20px;
 }
-.weather-condition {
-  padding: 20px;
-}
-.weather-date,
-.weatherDetail {
-  font-size: 22px;
-}
+
 .icon {
-  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
-.weatherItem {
-  margin: -50px 40px 50px 0;
-}
 .forecast-weather {
   display: flex;
   justify-content: space-evenly;
-  margin: 40px 0px 20px;
+  margin: 20px 0 0 0;
 }
 .forecast {
   border: none;
@@ -74,6 +76,7 @@ body {
   padding-top: 15px;
   margin-bottom: 30px;
 }
+
 .forecast-day {
   font-size: 18px;
 }
@@ -94,22 +97,13 @@ body {
 }
 .footer {
   font-size: 12px;
-  color: #333;
-  font-weight: bold;
+  color: #c0c0c0;
+  font-weight: bolder;
 }
 a {
   text-decoration: none;
 }
 a:hover {
   text-decoration: underline;
-}
-#showForecast {
-  font-size: 20px;
-  border: 1px solid #333;
-  border-radius: 10px;
-  width: 50%;
-  padding: 5px 5px 0;
-  color: grey;
-  cursor: pointer;
-  margin-top: 20px;
+  color: #c0c0c0;
 }
